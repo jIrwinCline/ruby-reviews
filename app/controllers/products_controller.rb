@@ -7,7 +7,10 @@ class ProductsController < ApplicationController
     @product = Product.new
     render :new
   end
-  def create
+  def create #how to make product_params method private?
+    def product_params
+      params.require(:product).permit(:name, :genre)
+    end
     @product = Product.new(product_params)
     if @product.save
       redirect_to products_path
@@ -15,10 +18,6 @@ class ProductsController < ApplicationController
       render :new
     end
 
-    private
-    def product_params
-      params.require(:product).permit(:name, :genre)
-    end
   end
 
   def edit
