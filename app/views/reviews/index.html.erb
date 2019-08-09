@@ -1,0 +1,14 @@
+<h1>All Reviews</h1>
+
+<% if @reviews.any? %>
+  <ul>
+    <% @reviews.each do |review| %>
+      <li><%= link_to review.user_name, product_path(review.product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no reviews yet.</p>
+<% end %>
+
+
+<p><%= link_to "View products", products_path %></p>
