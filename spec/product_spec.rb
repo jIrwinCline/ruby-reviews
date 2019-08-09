@@ -8,3 +8,6 @@ describe Product do
     expect(product.reviews()).to(eq([review1, review2]))
   end
 end
+# describe Product do
+#   it { should have_many(:reviews) }
+# end
