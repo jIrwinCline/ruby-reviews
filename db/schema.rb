@@ -19,11 +19,14 @@ ActiveRecord::Schema.define(version: 2019_08_09_175609) do
     t.string "name"
     t.string "company"
     t.string "purpose"
+    t.integer "cost"
+    t.string "country_of_origin"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.string "user_name"
     t.string "text"
+    t.integer "rubies"
     t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -4,8 +4,8 @@
 <% if @product.reviews.any? %>
   <ul>
     <% @product.reviews.each do |review| %>
-      <li><%= link_to review.user_name, product_review_path(@product, review) %>
-      <br><br>
+      <li><%= link_to review.user_name, product_review_path(@product, review) %><br>
+      Rating: <%= review.rubies %> Rubies<br>
       <%= review.text %></li>
     <% end%>
   </ul>

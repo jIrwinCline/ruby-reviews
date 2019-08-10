@@ -9,10 +9,11 @@ class ProductsController < ApplicationController
   end
   def create #how to make product_params method private?
     def product_params
-      params.require(:product).permit(:name, :company, :purpose)
+      params.require(:product).permit(:name, :company, :purpose, :cost, :country_of_origin)
     end
     @product = Product.new(product_params)
     if @product.save
+      flash[:notice] = "Product successfully added!"
       redirect_to products_path
     else
       render :new
@@ -30,11 +31,10 @@ class ProductsController < ApplicationController
     render :show
   end
   def update
-
     def product_params
-      params.require(:product).permit(:name, :company, :purpose)
+      params.require(:product).permit(:name, :company, :purpose, :cost, :country_of_origin)
     end
-    
+
     @product= Product.find(params[:id])
     if @product.update(product_params)
       redirect_to products_path
@@ -43,8 +43,14 @@ class ProductsController < ApplicationController
     end
   end
   def destroy
+    flash[:notice] = "Product successfully deleted!"
+
     @product = Product.find(params[:id])
     @product.destroy
     redirect_to products_path
+  end
+  private
+  def product_params
+    params.require(:product).permit(:name, :company, :purpose, :cost, :country_of_origin)
   end
 end
