@@ -49,7 +49,7 @@ class ReviewsController < ApplicationController
 
   private
     def review_params
-      params.require(:review).permit(:user_name, :text)
+      params.require(:review).permit(:user_name, :text, :rubies)
     end
 
 end
