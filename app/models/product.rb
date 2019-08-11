@@ -7,6 +7,8 @@ class Product < ApplicationRecord
   validates :country_of_origin, presence: true
   before_save(:titleize_product)
 
+  # scope :most_reviews, -> { Product.maximum(:reviews) }#??
+
   def self.most_reviews
     @top_count = 0
     @curr_count = 0
@@ -24,6 +26,8 @@ class Product < ApplicationRecord
     end
     @most_product
   end
+
+  scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
 
   private
     def titleize_product

@@ -1,1 +1,3 @@
 1. error updating reviews when doesn't meet validations
+
+2. increase efficiency for most reviews method/scope?
