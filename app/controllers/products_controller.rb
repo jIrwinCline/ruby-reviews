@@ -53,4 +53,6 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:name, :company, :purpose, :cost, :country_of_origin)
   end
+
+  
 end

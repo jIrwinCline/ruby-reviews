@@ -1,5 +1,12 @@
 <h1>Ruby Reviews</h1>
 <h3>View products and leave reviews!</h3>
+
+<% if @products.any? %>
+  <p>Most Reviewed: <%= link_to @products.most_reviews.name, product_path(@products.most_reviews) %></p>
+<% else %>
+
+<% end %>
 <br><br>
+
 <p><%= link_to "View products", products_path %></p>
 <p><%= link_to "Add Products", new_product_path %></p>
