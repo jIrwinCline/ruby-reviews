@@ -1,0 +1,16 @@
+<h1>USA Products</h1>
+
+<% if @products.any? %>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products yet.</p>
+<% end %>
+
+
+
+<p><%= link_to "Add a new product for Review", new_product_path %></p>
+<p><%= link_to "Back to Home", root_path %></p>

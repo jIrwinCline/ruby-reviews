@@ -1,0 +1,2 @@
+module UsaProductsHelper
+end
