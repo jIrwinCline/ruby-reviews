@@ -29,7 +29,7 @@ class Product < ApplicationRecord
 
   scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
 
-  scope :usa_only, -> { order(country_of_origin: "USA")}
+  scope :usa_only, -> { where(country_of_origin: "USA")}
 
   private
     def titleize_product

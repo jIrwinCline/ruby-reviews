@@ -49,10 +49,15 @@ class ProductsController < ApplicationController
     @product.destroy
     redirect_to products_path
   end
+
+  def usaindex
+    @products = Product.all.usa_only
+    render :index
+  end
   private
   def product_params
     params.require(:product).permit(:name, :company, :purpose, :cost, :country_of_origin)
   end
 
-  
+
 end
