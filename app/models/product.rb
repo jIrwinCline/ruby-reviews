@@ -6,6 +6,7 @@ class Product < ApplicationRecord
   validates :cost, presence: true
   validates :country_of_origin, presence: true
   before_save(:titleize_product)
+  before_save(:country_caps)
 
   # scope :most_reviews, -> { Product.maximum(:reviews) }#??
 
@@ -32,6 +33,14 @@ class Product < ApplicationRecord
   scope :usa_only, -> { where(country_of_origin: "USA")}
 
   private
+
+    def country_caps
+      if country_of_origin == "usa"
+        self.country_of_origin = self.country_of_origin.upcase
+      else
+        self.country_of_origin = self.country_of_origin.titleize
+      end
+    end
     def titleize_product
       self.name = self.name.titleize
     end
