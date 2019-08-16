@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   has_many :reviews, dependent: :destroy
-  # validates :name, presence: true
+  validates :name, presence: true
   # validates :company, presence: true
   # validates :purpose, presence: true
   # validates :cost, presence: true
