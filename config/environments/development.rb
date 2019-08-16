@@ -52,8 +52,22 @@ Rails.application.configure do
   config.assets.debug = true #chnged to false, didnt work
   #config.assets.unknown_asset_fallback = true #added this line, didn't work
   config.assets.check_precompiled_asset = false#added for css??? finally worked
+  #------------------------------------------------------------------
+  #------------------------------------------------------------------
+  # for error : Failure/Error: <%= stylesheet_link_tag "styles.css" %>
 
+     #ActionView::Template::Error:
+       #Asset was not declared to be precompiled in production
+  #-------------------------------------------------------------------
+  # appears when running rspec
+  #-------------------------------------------------------------------
 
+  # config.assets.compile = true
+  # config.assets.precompile =  ['*.js', '*.css', '*.css.erb']
+
+  #didnt work...
+  #-------------------------------------------------------------------
+  #-------------------------------------------------------------------
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
