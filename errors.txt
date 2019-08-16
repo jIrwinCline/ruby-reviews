@@ -3,3 +3,5 @@
 2. increase efficiency for most reviews method/scope?
 
 3. why in my seeds did I have to say 249 for reviews?
+
+4. whats going on on line 33 of products.rb. scoping
