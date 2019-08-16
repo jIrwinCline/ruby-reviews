@@ -11,13 +11,16 @@ Review.destroy_all
 50.times do |i|
   Product.create!({name: Faker::Appliance.equipment, company: Faker::Appliance.brand, country_of_origin: Faker::Address.country, cost: Faker::Commerce.price })
 end
-250.times do |i|
-  n = 1
-  x = 0
+i = 1
+n = 1
+x = 0
+249.times do |index|
+
   if i == x + 5
     x += 5
     n += 1
   end
   product = Product.find(n)
   review = product.reviews.create!({user_name: Faker::Name.name, text: Faker::Lorem.paragraph(sentence_count: 4), rubies: Faker::Number.between(from: 1, to: 5)})
+  i += 1
 end
