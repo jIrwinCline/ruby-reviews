@@ -65,7 +65,7 @@ Rails.application.configure do
   # config.assets.compile = true
   # config.assets.precompile =  ['*.js', '*.css', '*.css.erb']
 
-  #didnt work...
+  #didnt work...got to initializers/assets.rb to see solution
   #-------------------------------------------------------------------
   #-------------------------------------------------------------------
   # Suppress logger output for asset requests.
