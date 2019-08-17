@@ -24,3 +24,7 @@ x = 0
   review = product.reviews.create!({user_name: Faker::Name.name, text: Faker::Lorem.paragraph(sentence_count: 4), rubies: Faker::Number.between(from: 1, to: 5)})
   i += 1
 end
+
+truck = Product.new({name: "Ford Truck", company: "Ford", country_of_origin: "usa", cost: "40,000" })
+
+truck.save
