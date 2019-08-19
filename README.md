@@ -1,24 +1,35 @@
-# README
+# _Ruby-Reviews (Mario's Foods Assignment)_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### _Epicodus Ruby week 5_
 
-Things you may want to cover:
+#### By _**Jake Irwin**_
 
-* Ruby version
+## Description
 
-* System dependencies
+_a program that uses full CRUD functionality to add products to the webpage and also add reviews of those items for users to see._
 
-* Configuration
+## Known bugs
 
-* Database creation
+_no known bugs_
 
-* Database initialization
 
-* How to run the test suite
+## Setup/Installation Requirements
 
-* Services (job queues, cache servers, search engines, etc.)
+* Download files from GitHub and install all gems
+* run the rails server ($ rails s)
+* use localhost:3000
+* navigate page to view products
+* add reviews to products or whole new products as you see fit.
 
-* Deployment instructions
 
-* ...
+## Link to GitHub Pages
+
+_Link to GitHub repo:_
+(https://github.com/jIrwinCline/ruby-reviews.git)
+
+
+### License
+
+* _open source_
+
+Copyright (c) 2019 **_Jacob Irwin_**
