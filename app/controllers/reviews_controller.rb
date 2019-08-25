@@ -2,9 +2,8 @@ class ReviewsController < ApplicationController
 
   def new
     @product = Product.find(params[:product_id])
-    
+
     @review = @product.reviews.new
-    render :new
   end
 
   def create
@@ -21,14 +20,12 @@ class ReviewsController < ApplicationController
   def show
     @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
-    render :show
   end
 
   def edit
     @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
     flash[:notice] = "Review successfully edited!"
-    render :edit
   end
 
   def update

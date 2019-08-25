@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   end
   def new
     @product = Product.new
-    render :new
+
   end
   def create #how to make product_params method private?
     def product_params
@@ -23,12 +23,12 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-    render :edit
+
   end
 
   def show
     @product = Product.find(params[:id])
-    render :show
+
   end
   def update
     def product_params
